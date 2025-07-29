@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syed PACKAGES - Manufacturer of Quality Bags in Lahore</title>
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Syed PACKAGES</h1>
+        <p>Your trusted partner for quality packaging solutions.</p>
+    </header>
+
+    <hr>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About Us</a> |
+        <a href="#products">Our Products</a> |
+        <a href="#gallery">Gallery</a> |
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <hr>
+
+    <main>
+        <!-- About Us Section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <p>
+                Welcome to Syed PACKAGES, a leading manufacturer and supplier of high-quality bags based in the heart of Lahore, Pakistan. With years of experience in the industry, we are dedicated to providing durable, reliable, and customized packaging solutions to meet the diverse needs of our clients. Our commitment to excellence and customer satisfaction sets us apart.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- Products Section -->
+        <section id="products">
+            <h2>Our Products</h2>
+            <p>We specialize in a variety of bags suitable for different purposes.</p>
+            
+            <article>
+                <h3>Shopping Plastic Bags</h3>
+                <p>
+                    Durable and versatile plastic bags perfect for retail stores, supermarkets, and everyday use. Available in various sizes, thicknesses, and can be customized with your brand logo.
+                </p>
+            </article>
+            
+            <article>
+                <h3>Woven Bags</h3>
+                <p>
+                    Heavy-duty woven polypropylene (PP) bags ideal for packaging bulk items like grains, flour, sugar, and construction materials. These bags are known for their strength and resistance to tearing.
+                </p>
+            </article>
+            
+            <article>
+                <h3>Custom Packaging Bags</h3>
+                <p>
+                    Tailor-made packaging solutions designed to your exact specifications. Whether you need unique shapes, sizes, prints, or materials, we work with you to create packaging that perfectly represents your brand and protects your product.
+                </p>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Product Gallery</h2>
+            <p>Here are a few samples of our work. Please replace the 'src' attribute with your actual image file paths.</p>
+            
+            <!-- Placeholder Image 1 -->
+            <img src="https://placehold.co/300x200/eeeeee/cccccc?text=Shopping+Bag" alt="A sample shopping bag" width="300" height="200">
+            
+            <!-- Placeholder Image 2 -->
+            <img src="https://placehold.co/300x200/eeeeee/cccccc?text=Woven+Bag" alt="A sample woven bag" width="300" height="200">
+            
+            <!-- Placeholder Image 3 -->
+            <img src="https://placehold.co/300x200/eeeeee/cccccc?text=Custom+Packaging" alt="A sample of custom packaging" width="300" height="200">
+
+            <!-- Placeholder Image 4 (Optional) -->
+            <img src="https://placehold.co/300x200/eeeeee/cccccc?text=Our+Factory" alt="Our factory or machinery" width="300" height="200">
+        </section>
+
+        <hr>
+
+        <!-- Contact Us Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for quotes, queries, or orders.</p>
+            <ul>
+                <li><strong>Address:</strong> [Your Full Address], Lahore, Pakistan</li>
+                <li><strong>Phone:</strong> [Your Phone Number]</li>
+                <li><strong>Email:</strong> [Your Email Address]</li>
+                <li><strong>Working Hours:</strong> Monday - Saturday, 9:00 AM - 6:00 PM</li>
+            </ul>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Syed PACKAGES. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
 
