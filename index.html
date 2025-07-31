@@ -3,109 +3,346 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syed PACKAGES - Manufacturer of Quality Bags in Lahore</title>
-    <link rel="stylesheet" href="styling.css">
-</head>
-<body>
+    <title>Syed Packages - Custom Shopping Bag Solutions</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Header Section -->
-    <header>
-        <h1>Syed PACKAGES</h1>
-        <p>Your trusted partner for quality packaging solutions.</p>
+    <style>
+        /* Custom styles to enhance the premium feel */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5f7; /* Light grey background */
+            color: #1d1d1f; /* Primary text color */
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section fade-in animation on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom button styles */
+        .btn-primary {
+            background-color: #0071e3; /* Professional blue */
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0077ed;
+        }
+
+        .btn-secondary {
+            background-color: #e8e8ed;
+            color: #1d1d1f;
+            transition: background-color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #dcdce1;
+        }
+        
+        /* Glassmorphism effect for the header */
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        /* WhatsApp button style */
+        .whatsapp-fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+            transition: transform 0.3s ease;
+        }
+        .whatsapp-fab:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Syed Packages</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-600 hover:text-blue-500 transition-colors duration-300">About</a>
+                <a href="#products" class="text-gray-600 hover:text-blue-500 transition-colors duration-300">What We Sell</a>
+                <a href="#factory" class="text-gray-600 hover:text-blue-500 transition-colors duration-300">Our Factory</a>
+                <a href="#contact" class="btn-primary px-5 py-2 rounded-full font-semibold">Get a Quote</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#about" class="block text-center py-4 text-lg text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#products" class="block text-center py-4 text-lg text-gray-700 hover:bg-gray-100">What We Sell</a>
+            <a href="#factory" class="block text-center py-4 text-lg text-gray-700 hover:bg-gray-100">Our Factory</a>
+            <a href="#contact" class="block text-center py-4 text-lg text-gray-700 hover:bg-gray-100">Get a Quote</a>
+        </div>
     </header>
 
-    <hr>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#about">About Us</a> |
-        <a href="#products">Our Products</a> |
-        <a href="#gallery">Gallery</a> |
-        <a href="#contact">Contact Us</a>
-    </nav>
-
-    <hr>
-
+    <!-- Main Content -->
     <main>
-        <!-- About Us Section -->
-        <section id="about">
-            <h2>About Us</h2>
-            <p>
-                Welcome to Syed PACKAGES, a leading manufacturer and supplier of high-quality bags based in the heart of Lahore, Pakistan. With years of experience in the industry, we are dedicated to providing durable, reliable, and customized packaging solutions to meet the diverse needs of our clients. Our commitment to excellence and customer satisfaction sets us apart.
-            </p>
+        <!-- Hero Section -->
+        <section id="hero" class="text-center py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-6 reveal">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tighter">
+                    Custom Shopping Bags.
+                    <br>
+                    <span class="text-gray-500">Designed for Impact.</span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-600">
+                    We specialize in manufacturing high-quality shopping bags that carry your brand further. From durable woven totes to modern biodegradable plastics, we create packaging that your customers will love to use.
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#products" class="btn-primary px-6 py-3 rounded-full font-semibold text-lg">See Our Products</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScu44QP1kxHrUW7m3V2DIjfA10RH0aTBRGngFOi2YceZ9FiZA/viewform?usp=dialog" target="_blank" class="btn-secondary px-6 py-3 rounded-full font-semibold text-lg">Order Now</a>
+                </div>
+            </div>
         </section>
 
-        <hr>
+        <!-- About Us Section -->
+        <section id="about" class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold">Your Partner in Packaging.</h2>
+                    <p class="mt-4 text-lg text-gray-600">Decades of experience, committed to quality and innovation.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                    <div class="reveal">
+                        <h3 class="text-3xl font-bold mb-4">Who We Are</h3>
+                        <p class="text-gray-600 mb-4">Syed Packages is a leading manufacturer of custom shopping bags based in Pakistan. With a focus on quality craftsmanship and client satisfaction, we have become a trusted partner for businesses both locally and internationally. Our state-of-the-art facility allows us to handle orders of all sizes with precision and efficiency.</p>
+                    </div>
+                    <div class="reveal" style="transition-delay: 200ms;">
+                        <h3 class="text-3xl font-bold mb-4">Our Biodegradable Plastic</h3>
+                        <p class="text-gray-600">We are proud to offer advanced biodegradable plastic solutions. Our eco-friendly bags provide the durability and functionality of traditional plastic while being designed to break down responsibly, reducing environmental impact. It's the perfect choice for brands looking to make a sustainable statement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Products Section -->
-        <section id="products">
-            <h2>Our Products</h2>
-            <p>We specialize in a variety of bags suitable for different purposes.</p>
-            
-            <article>
-                <h3>Shopping Plastic Bags</h3>
-                <p>
-                    Durable and versatile plastic bags perfect for retail stores, supermarkets, and everyday use. Available in various sizes, thicknesses, and can be customized with your brand logo.
-                </p>
-            </article>
-            
-            <article>
-                <h3>Woven Bags</h3>
-                <p>
-                    Heavy-duty woven polypropylene (PP) bags ideal for packaging bulk items like grains, flour, sugar, and construction materials. These bags are known for their strength and resistance to tearing.
-                </p>
-            </article>
-            
-            <article>
-                <h3>Custom Packaging Bags</h3>
-                <p>
-                    Tailor-made packaging solutions designed to your exact specifications. Whether you need unique shapes, sizes, prints, or materials, we work with you to create packaging that perfectly represents your brand and protects your product.
-                </p>
-            </article>
+        <section id="products" class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold">What We Sell.</h2>
+                    <p class="mt-4 text-lg text-gray-600">A gallery of our high-quality products.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Product 1 -->
+                    <a href="#" class="block group reveal">
+                        <div class="overflow-hidden rounded-2xl bg-gray-100">
+                             <img src="https://placehold.co/800x600/1d1d1f/f5f5f7?text=Retail+Shopping+Bags" alt="Retail Shopping Bags" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold mt-4">Boutique & Retail Bags</h3>
+                    </a>
+                    <!-- Product 2 -->
+                    <a href="#" class="block group reveal" style="transition-delay: 100ms;">
+                        <div class="overflow-hidden rounded-2xl bg-gray-100">
+                             <img src="https://placehold.co/800x600/0071e3/ffffff?text=Woven+Totes" alt="Woven Totes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold mt-4">Reusable Woven Totes</h3>
+                    </a>
+                     <!-- Product 3 -->
+                    <a href="#" class="block group reveal" style="transition-delay: 200ms;">
+                        <div class="overflow-hidden rounded-2xl bg-gray-100">
+                             <img src="https://placehold.co/800x600/e8e8ed/1d1d1f?text=Biodegradable+Bags" alt="Biodegradable Bags" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold mt-4">Eco-Friendly Options</h3>
+                    </a>
+                    <!-- Product 4 -->
+                    <a href="#" class="block group reveal" style="transition-delay: 300ms;">
+                        <div class="overflow-hidden rounded-2xl bg-gray-100">
+                             <img src="https://placehold.co/800x600/333333/ffffff?text=Printed+Plastic+Bags" alt="Printed Plastic Bags" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold mt-4">Promotional Plastic Bags</h3>
+                    </a>
+                    <!-- Product 5 -->
+                    <a href="#" class="block group reveal" style="transition-delay: 400ms;">
+                        <div class="overflow-hidden rounded-2xl bg-gray-100">
+                             <img src="https://placehold.co/800x600/25D366/ffffff?text=Grocery+Bags" alt="Grocery Bags" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold mt-4">Grocery & Supermarket Bags</h3>
+                    </a>
+                    <!-- Product 6 -->
+                    <a href="#" class="block group reveal" style="transition-delay: 500ms;">
+                        <div class="overflow-hidden rounded-2xl bg-gray-100">
+                             <img src="https://placehold.co/800x600/f5f5f7/1d1d1f?text=Custom+Designs" alt="Custom Designs" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <h3 class="text-xl font-bold mt-4">Fully Custom Designs</h3>
+                    </a>
+                </div>
+            </div>
         </section>
 
-        <hr>
-
-        <!-- Gallery Section -->
-        <section id="gallery">
-            <h2>Product Gallery</h2>
-            <p>Here are a few samples of our work. Please replace the 'src' attribute with your actual image file paths.</p>
-            
-            <!-- Placeholder Image 1 -->
-            <img src="https://placehold.co/300x200/eeeeee/cccccc?text=Shopping+Bag" alt="A sample shopping bag" width="300" height="200">
-            
-            <!-- Placeholder Image 2 -->
-            <img src="https://placehold.co/300x200/eeeeee/cccccc?text=Woven+Bag" alt="A sample woven bag" width="300" height="200">
-            
-            <!-- Placeholder Image 3 -->
-            <img src="https://placehold.co/300x200/eeeeee/cccccc?text=Custom+Packaging" alt="A sample of custom packaging" width="300" height="200">
-
-            <!-- Placeholder Image 4 (Optional) -->
-            <img src="https://placehold.co/300x200/eeeeee/cccccc?text=Our+Factory" alt="Our factory or machinery" width="300" height="200">
+        <!-- Factory Section -->
+        <section id="factory" class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12 reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold">Our Facility.</h2>
+                    <p class="mt-4 text-lg text-gray-600">Where quality and scale meet.</p>
+                </div>
+                <div class="reveal overflow-hidden rounded-3xl shadow-lg">
+                    <img src="https://placehold.co/1600x800/333333/f5f5f7?text=Syed+Packages+Factory" alt="Syed Packages Factory" class="w-full h-full object-cover">
+                </div>
+            </div>
         </section>
 
-        <hr>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32 bg-white">
+             <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold">Looking for a packaging partner?</h2>
+                    <p class="mt-4 text-lg text-gray-600">Let's discuss your requirements. Fill out the form below or contact us directly.</p>
+                </div>
+                
+                <div class="bg-gray-100 p-8 rounded-2xl grid md:grid-cols-2 gap-8 reveal">
+                    <!-- Contact Form -->
+                    <form action="#" method="POST">
+                        <h3 class="text-2xl font-bold mb-4">Send us a Message</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="name" class="sr-only">Your Name</label>
+                                <input type="text" name="name" id="name" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3 px-4" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label for="email" class="sr-only">Company Email</label>
+                                <input type="email" name="email" id="email" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3 px-4" placeholder="Company Email">
+                            </div>
+                            <div>
+                                 <label for="message" class="sr-only">Your Requirements</label>
+                                 <textarea id="message" name="message" rows="4" class="block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 py-3 px-4" placeholder="Tell us about the type of bag, required quantity, etc..."></textarea>
+                            </div>
+                        </div>
+                         <div class="mt-6">
+                            <button type="submit" class="btn-primary w-full px-10 py-3 rounded-full font-bold text-lg">Submit Request</button>
+                        </div>
+                    </form>
+                    <!-- Contact Info -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold">Contact Information</h3>
+                        <div>
+                            <h4 class="font-semibold">Address</h4>
+                            <p class="text-gray-600">123 Packaging Lane, Industrial Area,<br>Lahore, Pakistan</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Email</h4>
+                            <p class="text-gray-600"><a href="mailto:sales@syedpackages.com" class="text-blue-600 hover:underline">sales@syedpackages.com</a></p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Phone</h4>
+                            <p class="text-gray-600">+92 300 8467051</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Contact Us Section -->
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us for quotes, queries, or orders.</p>
-            <ul>
-                <li><strong>Address:</strong> [Your Full Address], Lahore, Pakistan</li>
-                <li><strong>Phone:</strong> [Your Phone Number]</li>
-                <li><strong>Email:</strong> [Your Email Address]</li>
-                <li><strong>Working Hours:</strong> Monday - Saturday, 9:00 AM - 6:00 PM</li>
-            </ul>
+        <!-- Owner Section -->
+        <section id="owner" class="py-20 md:py-24">
+            <div class="container mx-auto px-6 text-center reveal">
+                <img src="https://placehold.co/200x200/e8e8ed/1d1d1f?text=Owner" alt="Owner of Syed Packages" class="w-40 h-40 rounded-full mx-auto shadow-lg">
+                <h3 class="text-3xl font-bold mt-6">Meet the Owner</h3>
+                <p class="max-w-2xl mx-auto mt-2 text-gray-600">"Our family has been in the packaging business for generations. We built this company on a foundation of trust, quality, and a commitment to our clients' success. We look forward to working with you."</p>
+                <p class="font-bold text-lg mt-4">- Syed [Owner's Name]</p>
+            </div>
         </section>
     </main>
 
-    <hr>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Syed PACKAGES. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Syed Packages. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-white">Facebook</a>
+                <a href="#" class="hover:text-white">LinkedIn</a>
+                <a href="#" class="hover:text-white">Alibaba</a>
+            </div>
+        </div>
     </footer>
+
+    <!-- WhatsApp Floating Action Button -->
+    <a href="https://wa.me/923008467051" target="_blank" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+    </a>
+
+    <script>
+        // JavaScript for scroll animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                // Add a small offset so the animation triggers a bit before the element is fully in view
+                const elementVisible = 150; 
+
+                if (elementTop < windowHeight - elementVisible) {
+                    el.classList.add('visible');
+                }
+            });
+        };
+
+        // Toggle mobile menu
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Trigger on load as well for elements already in view
+        revealOnScroll();
+    </script>
 
 </body>
 </html>
-
